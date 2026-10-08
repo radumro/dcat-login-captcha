@@ -30,7 +30,7 @@ if (! function_exists('login_captcha_url')) {
     /**
      * 获取登录验证码 url 地址.
      */
-    function login_captcha_url(string $routeName = null): string
+    function login_captcha_url(?string $routeName = null): string
     {
         if (is_null($routeName)) {
             return admin_route('captcha.generate', ['random' => Str::random()]);
